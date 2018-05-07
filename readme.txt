@@ -3,7 +3,7 @@
 Contributors: techabout
 Requires at least: WordPress 4.7
 Tested up to: WordPress 5.0-trunk
-Version: 1.0.0
+Version: 1.0.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, right-sidebar, custom-logo, custom-background, custom-menu, footer-widgets, blog, threaded-comments, translation-ready
@@ -56,14 +56,25 @@ And
 https://github.com/google/material-design-icons/blob/master/LICENSE
 https://github.com/FezVrasta/bootstrap-material-design/blob/master/fonts/LICENSE.txt
  
-d) Images Used In ScreenShot and In Theme
+d) VelocityJS
+(C) 2014 Julian Shapiro. 
+https://github.com/julianshapiro/velocity/blob/master/velocity.min.js
+MIT @license: en.wikipedia.org/wiki/MIT_License
+
+e) Images Used In ScreenShot and In Theme
 By:stephen4
 Source: https://pixabay.com/en/tech-digital-digital-technology-1495181/
 By: ColiN00B
 https://pixabay.com/en/processor-cpu-computer-chip-board-2217771/
+By: rawpixel
+https://pixabay.com/en/business-computer-office-laptop-3370832/ 
 Licensed: CC0 Creative Commons
 
 == Changelog ==
+
+= 1.0.1 =
+* Released: May 7, 2018
+* Error/Bugs Removal
 
 = 1.0.0 =
 * Released: April 26, 2018

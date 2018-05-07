@@ -153,17 +153,17 @@ add_action( 'widgets_init', 'techabout_widgets_init' );
 function techabout_scripts() {
 	// Global
 	
-	wp_enqueue_style('materialize.min.css', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css', array() );
+	wp_enqueue_style('Materialize-css', get_template_directory_uri() . '/assets/css/materialize.min.css', array() );
 
-	wp_enqueue_style( 'TechAbout-style', get_stylesheet_uri(), array() );
+	wp_enqueue_style( 'TechAbout-css', get_stylesheet_uri(), array() );
 
-	wp_enqueue_style( 'TechAbout-Material_Icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array() );
+	wp_enqueue_style( 'Icon', 'https://fonts.googleapis.com/icon?family=Material+Icons', array() );
 
-	wp_enqueue_script( 'TechAbout-materialize-js', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'Materialize-js', get_template_directory_uri() . '/assets/js/materialize.min.js', array( 'jquery' ) );
 
 	wp_enqueue_script( 'TechAbout-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(
 		'jquery',
-		'TechAbout-materialize-js'
+		'Materialize-js'
 	) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -186,6 +186,10 @@ require get_template_directory() . '/inc/customizer.php';
 
 
 function techabout_excerpt_length( $length ) {
+	if( is_admin() ){
+		return $length;
+	}
     return 40;
 }
+
 add_filter( 'excerpt_length', 'techabout_excerpt_length', 999 );

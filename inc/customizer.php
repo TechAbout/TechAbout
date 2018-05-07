@@ -117,27 +117,29 @@ $wp_customize->add_panel( 'front_page_panel', array(
 	/*Welcome Heading*/
 
 		$wp_customize->add_setting( 'Welcome_message_heading', array(
-			'default' => 'Your Welcome Message Heading',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'welcome_heading_control', array(
 			'label'    => __( 'Welcome Message Heading: ', 'techabout' ),
 			'section'  => 'Welcome_section',
-			'settings' => 'Welcome_message_heading'	
+			'settings' => 'Welcome_message_heading',
+			'input_attrs' => array(
+			'placeholder' => __( 'Your Welcome Message Heading', 'techabout' ))
 		) );
 
 	/*Welcome Description*/
 
 		$wp_customize->add_setting( 'Welcome_message_description', array(
-			'default' => 'Your Welcome Message',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'welcome_description_control', array(
 			'label'    => __( 'Welcome Message: ', 'techabout' ),
 			'section'  => 'Welcome_section',
-			'settings' => 'Welcome_message_description'	
+			'settings' => 'Welcome_message_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Your Welcome Message', 'techabout' ))
 	) );
 
 	/* Welcome Section Image Upload */
@@ -156,14 +158,15 @@ $wp_customize->add_panel( 'front_page_panel', array(
 	    /* First Section Button 1 Description */
 
 		$wp_customize->add_setting( 'first_section_button1_description', array(
-			'default' => 'Button 1',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'first_section_button1_description', array(
 			'label'    => __( 'Button 1 Description: ', 'techabout' ),
 			'section'  => 'Welcome_section',
-			'settings' => 'first_section_button1_description'	
+			'settings' => 'first_section_button1_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Button 1', 'techabout' ))	
 		) );	
 
 		// First Section Button 1 link
@@ -198,14 +201,15 @@ $wp_customize->add_panel( 'front_page_panel', array(
 		/* First Section Button 2 Description */
 
 		$wp_customize->add_setting( 'first_section_button2_description', array(
-			'default' => 'Button 2',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'first_section_button2_description', array(
 			'label'    => __( 'Button 2 Description: ', 'techabout' ),
 			'section'  => 'Welcome_section',
-			'settings' => 'first_section_button2_description'	
+			'settings' => 'first_section_button2_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Button 2', 'techabout' ))		
 		) );	
 
 		// First Section Button 2 link
@@ -284,40 +288,43 @@ $wp_customize->add_panel( 'front_page_panel', array(
 	/* Second Section Heading */
 
 		$wp_customize->add_setting( 'second_section_heading', array(
-			'default' => 'Heading',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'second_section_heading_control', array(
 			'label'    => __( 'Heading: ', 'techabout' ),
 			'section'  => 'second_section',
-			'settings' => 'second_section_heading'	
+			'settings' => 'second_section_heading',
+			'input_attrs' => array(
+			'placeholder' => __( 'Heading', 'techabout' ))	
 		) );
 
 	/* Second Section Description */
 
 		$wp_customize->add_setting( 'second_section_description', array(
-			'default' => 'Second Section Description',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'second_section_description_control', array(
 			'label'    => __( 'Description: ', 'techabout' ),
 			'section'  => 'second_section',
-			'settings' => 'second_section_description'	
+			'settings' => 'second_section_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Second Section Description', 'techabout' ))	
 		) );
 
 	/* Second Section Button Description */
 
 		$wp_customize->add_setting( 'second_section_button_description', array(
-			'default' => 'Button',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'second_section_button_description', array(
 			'label'    => __( 'Button Description: ', 'techabout' ),
 			'section'  => 'second_section',
-			'settings' => 'second_section_button_description'	
+			'settings' => 'second_section_button_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Button', 'techabout' ))	
 		) );	
 
 	// Second Section Button link
@@ -390,14 +397,15 @@ $wp_customize->add_panel( 'front_page_panel', array(
 	/* Fourth Section Description */
 
 		$wp_customize->add_setting( 'fourth_section_description', array(
-			'default' => 'Description',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'fourth_section_description', array(
 			'label'    => __( 'Description: ', 'techabout' ),
 			'section'  => 'fourth_section',
-			'settings' => 'fourth_section_description'	
+			'settings' => 'fourth_section_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Description', 'techabout' ))		
 		) );
 
 /* ---------------- END Front-Page Fourth Section ----------------------- */
@@ -429,53 +437,57 @@ $wp_customize->add_panel( 'front_page_panel', array(
 	/* Fifth Section Heading */
 
 		$wp_customize->add_setting( 'fifth_section_heading', array(
-			'default' => 'Main Heading',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'fifth_section_heading', array(
 			'label'    => __( 'Main Heading: ', 'techabout' ),
 			'section'  => 'fifth_section',
-			'settings' => 'fifth_section_heading'	
+			'settings' => 'fifth_section_heading',
+			'input_attrs' => array(
+			'placeholder' => __( 'Main Heading', 'techabout' ))		
 		) );
 
 	/* Fifth Section Description */
 
 		$wp_customize->add_setting( 'fifth_section_description', array(
-			'default' => 'Description',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'fifth_section_description', array(
 			'label'    => __( 'Description: ', 'techabout' ),
 			'section'  => 'fifth_section',
-			'settings' => 'fifth_section_description'	
+			'settings' => 'fifth_section_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Description', 'techabout' ))	
 		) );
 
 	/* Fifth Section Sub-Heading */
 
 		$wp_customize->add_setting( 'fifth_section_sub_heading', array(
-			'default' => 'Sub-Heading',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'fifth_section_sub_heading', array(
 			'label'    => __( 'Sub-Heading: ', 'techabout' ),
 			'section'  => 'fifth_section',
-			'settings' => 'fifth_section_sub_heading'	
+			'settings' => 'fifth_section_sub_heading',
+			'input_attrs' => array(
+			'placeholder' => __( 'Sub-Heading', 'techabout' ))	
 		) );
 
 	/* Fifth Section Sub-Heading-Description */
 
 		$wp_customize->add_setting( 'fifth_section_sub_heading_description', array(
-			'default' => 'Description',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'fifth_section_sub_heading_description', array(
 			'label'    => __( 'Description: ', 'techabout' ),
 			'section'  => 'fifth_section',
-			'settings' => 'fifth_section_sub_heading_description'	
+			'settings' => 'fifth_section_sub_heading_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Description', 'techabout' ))		
 		) );
 
 	/* Fifth Section Background Image */
@@ -582,28 +594,30 @@ $wp_customize->add_panel( 'front_page_panel', array(
 	/* Call To Action Section Description */
 
 		$wp_customize->add_setting( 'call_action_section_description', array(
-			'default' => 'Call To Action',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'call_action_section_description', array(
 			'label'    => __( 'Description: ', 'techabout' ),
 			'section'  => 'call_action_section',
-			'settings' => 'call_action_section_description'	
+			'settings' => 'call_action_section_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Call To Action', 'techabout' ))	
 		) );
 	
 
 	/* Call To Action Section Button Description */
 
 		$wp_customize->add_setting( 'call_action_section_button_description', array(
-			'default' => 'Button',
 			'sanitize_callback' => 'sanitize_text_field',
 			'panel'  => 'front_page_panel',
 		) );
 		$wp_customize->add_control( 'call_action_section_button_description', array(
 			'label'    => __( 'Button Description: ', 'techabout' ),
 			'section'  => 'call_action_section',
-			'settings' => 'call_action_section_button_description'	
+			'settings' => 'call_action_section_button_description',
+			'input_attrs' => array(
+			'placeholder' => __( 'Button', 'techabout' ))	
 		) );	
 
 	// Call To Action Section Button link

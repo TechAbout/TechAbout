@@ -15,21 +15,21 @@ get_header();
 <div class="first-block">
 	<div class="first-block-content">
 		<h1>
-			<?php echo esc_html(get_theme_mod( 'Welcome_message_heading', 'Your Welcome Message Heading' )); ?>
+			<?php echo esc_html(get_theme_mod( 'Welcome_message_heading', 'Welcome To The Company' )); ?>
 		</h1>
 		<p>
-			<?php echo esc_html(get_theme_mod( 'Welcome_message_description', 'Your Welcom Message Description' )); ?>
+			<?php echo esc_html(get_theme_mod( 'Welcome_message_description', 'We believe in strongly quality as the most important aspect of our work.' )); ?>
 		</p>
 
 		<?php if(get_theme_mod( "first_section_button1_display_option", true) == true) : ?>
 			<a class="btn btn-link button-1" href="<?php echo esc_url(get_theme_mod( 'first_section_button1_link', '#' )); ?>">
-				<?php echo esc_html(get_theme_mod( 'first_section_button1_description', 'Button 1' )); ?>
+				<?php echo esc_html(get_theme_mod( 'first_section_button1_description', 'About Us' )); ?>
 			</a>	
 		<?php endif; ?>
 
 		<?php if(get_theme_mod( "first_section_button2_display_option", true) == true) : ?>
 			<a class="btn btn-link button-2" href="<?php echo esc_url(get_theme_mod( 'first_section_button2_link', '#' )); ?>">
-				<?php echo esc_html(get_theme_mod( 'first_section_button2_description', 'Button 2' )); ?>
+				<?php echo esc_html(get_theme_mod( 'first_section_button2_description', 'Contact Us' )); ?>
 			</a>	
 		<?php endif; ?>
 
@@ -46,15 +46,15 @@ get_header();
 				<div class="col l4 s12">	
 					<div class="margin-top-content-1">
 						<h3>
-							<?php echo esc_html(get_theme_mod( 'second_section_heading', 'Heading' )); ?>
+							<?php echo esc_html(get_theme_mod( 'second_section_heading', 'Our Team' )); ?>
 						</h3>
 						<p>
-							<?php echo esc_html(get_theme_mod( 'second_section_description', 'Description' )); ?>
+							<?php echo esc_html(get_theme_mod( 'second_section_description', 'Every member of our team is highly competent in his field and entire team focus on goals and quality results.' )); ?>
 						</p>
 
 						<?php if(get_theme_mod( "second_section_button_display_option", true) == true) : ?>
 							<a class="btn btn-link" href="<?php echo esc_url(get_theme_mod( 'second_section_button_link', '#' )); ?>">
-								<?php echo esc_html(get_theme_mod( 'second_section_button_description', 'Button Description' )); ?>
+								<?php echo esc_html(get_theme_mod( 'second_section_button_description', 'Team Members' )); ?>
 							</a>	
 						<?php endif; ?>
 					</div>
@@ -62,7 +62,7 @@ get_header();
 			</div>
 		<div class="second-block-content-2">
 			<div class="col l8 s12 aligncenter padding-0">
-				<?php $img2 =get_template_directory_uri().'/img/pro.jpg'; ?>
+				<?php $img2 =get_template_directory_uri().'/img/team.jpg'; ?>
 				<img src="<?php echo esc_url(get_theme_mod( 'second_section_image', esc_url($img2) )); ?>">
 				<div class="clearfix"></div>
 			</div>
@@ -77,7 +77,7 @@ get_header();
 	<div class="fourth-block">
 		<div class="fourth-block-content">
 			<h2 class="fourth-block-heading-margin">
-				<?php echo esc_html(get_theme_mod( 'fourth_section_description', 'Description' )); ?>
+				<?php echo esc_html(get_theme_mod( 'fourth_section_description', 'Always give people more than they expect to get.' )); ?>
 			</h2>
 		</div>
 	</div>
@@ -91,14 +91,14 @@ get_header();
 		<div class="row">
 			<div class="col s12 m5">
 				<h1>
-					<?php echo esc_html(get_theme_mod( 'fifth_section_heading', 'Main Heading' )); ?>
+					<?php echo esc_html(get_theme_mod( 'fifth_section_heading', 'We believe in quality work.' )); ?>
 				</h1>
 				<h5>
-					<?php echo esc_html(get_theme_mod( 'fifth_section_description', 'Description' )); ?>
+					<?php echo esc_html(get_theme_mod( 'fifth_section_description', 'There is nothing important then the quality work.' )); ?>
 				</h5>
 				<br>
 				<i class="material-icons left md-48">
-					<?php echo esc_html(get_theme_mod( 'fifth_section_icons', 'code' )); ?>
+					<?php echo esc_html(get_theme_mod( 'fifth_section_icons', 'announcement' )); ?>
 				</i>
 				<h5>
 					<?php echo esc_html(get_theme_mod( 'fifth_section_sub_heading', 'Sub-Heading' )); ?>
@@ -125,10 +125,10 @@ get_header();
 		<div class="col s12 l12">
 			<div class="seventh-block-content">
 				<h1>
-					<?php echo esc_html(get_theme_mod( 'call_action_section_description', 'Call To Action' )); ?>
+					<?php echo esc_html(get_theme_mod( 'call_action_section_description', 'Want To Be Our Team Member ?' )); ?>
 				</h1>
 					<a class="btn btn-link" href="<?php echo esc_url(get_theme_mod( 'call_action_section_button_link', '#' )); ?>">
-						<?php echo esc_html(get_theme_mod( 'call_action_section_button_description', 'Button' )); ?>
+						<?php echo esc_html(get_theme_mod( 'call_action_section_button_description', 'Join Us Now' )); ?>
 					</a>
 			</div>
 		</div>

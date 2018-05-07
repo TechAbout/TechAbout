@@ -449,7 +449,7 @@ function techabout_breadcrumbs() {
 		// Single post (Only display the first category)
 		echo '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item-cat item-cat-' . esc_attr($category[0]->term_id) . ' item-cat-' . esc_attr($category[0]->category_nicename) . '"><a itemprop="item" class="bread-cat bread-cat-' . esc_attr($category[0]->term_id) . ' bread-cat-' . esc_attr($category[0]->category_nicename) . '" href="' . esc_url(get_category_link( $category[0]->term_id )) . '" title="' . esc_attr($category[0]->cat_name) . '"><span itemprop="name">' . esc_html($category[0]->cat_name) . '</span></a></li>';
 		echo '<li class="separator separator-' . esc_attr($category[0]->term_id) . ' material-icons">chevron_right</li>';
-		echo '<li style="margin-top: 1px;" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item-current item-' . esc_attr($post->ID) . '"><strong itemprop="name" class="bread-current bread-' . esc_attr($post->ID) . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
+		echo '<li style="margin-top: 1px;" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item-current item-' . esc_attr($post->ID) . '"><strong itemprop="name" class="bread-current bread-' . esc_attr($post->ID) . '" title="' . the_title_attribute( 'echo=0' ) . '">' . esc_html(get_the_title()) . '</strong></li>';
 
 	} else if ( is_category() ) {
 
@@ -470,7 +470,7 @@ function techabout_breadcrumbs() {
 			// Parent page loop
 			$parents = '';
 			foreach ( $anc as $ancestor ) {
-				$parents .= '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item-parent item-parent-' . $ancestor . '"><a itemprop="item" class="bread-parent bread-parent-' . $ancestor . '" href="' . get_permalink( $ancestor ) . '" title="' . get_the_title( $ancestor ) . '"><span itemprop="name">' . get_the_title( $ancestor ) . '</span></a></li>';
+				$parents .= '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item-parent item-parent-' . $ancestor . '"><a itemprop="item" class="bread-parent bread-parent-' . $ancestor . '" href="' . get_permalink( $ancestor ) . '" title="' . esc_html(get_the_title( $ancestor )) . '"><span itemprop="name">' . esc_html(get_the_title( $ancestor )) . '</span></a></li>';
 				$parents .= '<li class="material-icons col">chevron_right</li>';
 			}
 
@@ -478,12 +478,12 @@ function techabout_breadcrumbs() {
 			echo wp_kses_post($parents);
 
 			// Current page
-			echo '<li style="margin-top:1px;" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item-current item-' . esc_attr($post->ID) . '"><strong itemprop="name" title="' . get_the_title() . '"> ' . get_the_title() . '</strong></li>';
+			echo '<li style="margin-top:1px;" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item-current item-' . esc_attr($post->ID) . '"><strong itemprop="name" title="' . the_title_attribute( 'echo=0' ) . '"> ' . esc_html(get_the_title()) . '</strong></li>';
 
 		} else {
 
 			// Just display current page if not parents
-			echo '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item-current item-' . esc_attr($post->ID) . '"><strong itemprop="name" class="bread-current bread-' . esc_attr($post->ID) . '"> ' . get_the_title() . '</strong></li>';
+			echo '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="item-current item-' . esc_attr($post->ID) . '"><strong itemprop="name" class="bread-current bread-' . esc_attr($post->ID) . '"> ' . esc_html(get_the_title()) . '</strong></li>';
 
 		}
 
