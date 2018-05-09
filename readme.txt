@@ -3,7 +3,7 @@
 Contributors: techabout
 Requires at least: WordPress 4.7
 Tested up to: WordPress 5.0-trunk
-Version: 1.0.1
+Version: 1.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, right-sidebar, custom-logo, custom-background, custom-menu, footer-widgets, blog, threaded-comments, translation-ready
@@ -71,6 +71,10 @@ https://pixabay.com/en/business-computer-office-laptop-3370832/
 Licensed: CC0 Creative Commons
 
 == Changelog ==
+
+= 1.0.2 =
+* Released: May 9, 2018
+* URI Additions
 
 = 1.0.1 =
 * Released: May 7, 2018
